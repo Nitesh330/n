@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Internet Document</title>
+
+</head>
+<body>
+<style>
+    /* rakhi Css */
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden; /* Left to Right Scrolling Disable */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #fffdfd;
+            line-height: 1.6;
+        }      
+
+        /* Search Bar Styling */
+        nav form {
+            display: flex;
+            justify-content: right;  /* Serach Bar Location */
+            margin-left: 250px;   /* search bar me kitna gap hon acahaye */
+        }
+
+        nav input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1em;
+            width: 250px;
+            
+        }
+
+
+        nav button {
+            padding: 10px 15px;
+            background-color: #17e4a3;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            color: rgba(255, 0, 0, 0.438);
+            margin-left: 10px;
+        }
+        nav ul li {
+  display: inline-block;
+  font-size: 15px; /* Ya apne according */
+}
+
+        nav button:hover {
+            background-color: #ff5722;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding:  0;
+            
+        }
+
+        
+        
+
+        /* Main Content */
+        .container {
+            width: 80%;
+            margin: 80px auto;
+            display: flex;
+            
+            gap: 40px;
+        }
+
+        /* Main Blog Content */
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgb(255, 0, 0);
+        }
+
+        .main-content h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 30%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgb(248, 1, 1);
+        }
+
+        .sidebar h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .sidebar ul li a:hover {
+            color: #ff5722;
+        }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;  /* Removed padding to reduce height */
+    height: auto;  /* Automatically adjusts height based on content */
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container Adjustments */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;  /* Reset top margin to remove extra space above logo */
+    padding-top: 0; /* Reset padding above logo */
+}
+
+/* Logo Image Adjustments */
+.logo-container img {
+    margin-top: 0;  /* Ensure no extra margin on the top of the logo */
+    padding-top: 0; /* Ensure no padding on the top of the logo */
+}
+
+/* Navigation Menu (List) */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center ;
+    gap: 15px;  /* Reduced the gap between navigation items */
+    padding-left: 0;
+    margin: 0;  /* Removed margin */
+}
+
+/* Remove padding or margin from list items */
+nav ul li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0;  /* Reset margin */
+}
+
+/* Links inside the list items */
+nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+/* Search Form Styling */
+nav form {
+    display: flex;
+    justify-content: right;
+    margin-left: 50px;  /* Adjusted margin to align search bar */
+    margin-top: 0;  /* Remove any top margin */
+}
+
+/* Search input field styling */
+nav input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    width: 250px;
+    margin-top: 0;  /* Remove top margin */
+}
+
+/* Search button styling */
+nav button {
+    padding: 10px 15px;
+    background-color: #17e4a3;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    margin-left: 10px;
+    margin-top: 0;  /* Remove top margin */
+}
+
+/* Hero Section or Content Below */
+#hero {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding:  0;
+    margin-top: 0;  /* Reset margin above hero section */
+    height: 100vh; /* hero section should take up full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* center the content vertically */
+}
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0px;
+}
+#hero p {
+      font-size: 1.5em;
+      margin-bottom: 0px;
+}
+
+
+       
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu-icon {
+                display: block;
+                margin-left: auto;
+                font-size: 2.5em;
+                cursor: pointer;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-content,
+            .sidebar {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+       /* 4 horizental box */
+        .box-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box {
+            width: 220px;
+            background: linear-gradient(135deg, #ffffff, #e3f2fd);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #2196F3;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid #21d4f3;
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: #00ffdd;
+            font-size: 20px;
+        }
+        .box p {
+            padding: 0 15px 20px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Container for 3 boxes */
+        .box-container {
+            display: flex;
+            justify-content: space-around; /* Even spacing */
+            gap: 20px; /* Space between boxes */
+            padding: 20px;
+            flex-wrap: wrap; /* Makes it responsive */
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .box-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+/* new box container desgin */
+
+.flex-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* all box stlying*/
+.flex-box {
+    width: 200px;
+    height: auto;
+    background: linear-gradient(135deg, #75e8ff, #ff7eb3);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.flex-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 213, 0, 0.525);
+}
+
+/* box content  */
+.flex-box h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.flex-box p {
+    color: #fdfdfd;
+    font-size: 14px;
+}
+
+/* box walii img  */
+.flex-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+/* Read More button */
+.Read-Now {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: white;
+    color: #ff3d00;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.Download-Now {
+    display: inline-block;
+    margin-top: 10px; 
+    padding: 8px 15px;
+    background-color: white;
+    color: #ff3d00;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+} 
+
+.Download-Now:hover {
+    background-color: #ff3d00;
+    color: white;
+}
+/* button hover */
+.Read-Now:hover {
+    background-color: #ff3d00;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .flex-box-container {
+        flex-direction: column;
+    }
+
+    .flex-box {
+        width: 90%;
+    }
+}
+
+
+    /* yha se footer css start */
+    footer {
+        background-color: black;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+        position: auto;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px 20px;
+    }
+    
+    .footer-content {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 70%;
+    }
+    
+    .footer-content a {
+        color: #00c3ff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .footer-content a:hover {
+        text-decoration: underline;
+    }
+    
+    .footer-logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-logo img {
+        height: auto;
+        max-width: 150px;
+    }
+    
+    /* 📌 Mobile Responsive */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+        .footer-content {
+            max-width: 100%;
+            text-align: center;
+            font-size: 12px; /* Small font for mobile */
+        }
+        .footer-logo {
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .footer-logo img {
+            height: 40px; /* Smaller logo for mobile */
+        }
+    }
+    
+    
+    
+</style>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+      
+        <div class="navbar-container">
+             <!-- Logo Below the Navigation Bar -->
+ <!-- Logo and Text with Date, Day, and Greeting -->
+<div class="logo-container" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+    <!-- Logo and Address -->
+    <div style="display: flex; align-items: center;">
+        <img src="c:\Users\Nitesh\Desktop\Main Program\all used logo\logo-removebg-preview.png" alt="Logo" style="width: 17%; height: auto; margin-right: 40px;">
+        <div>
+            <h1 style="font-size: 2.5em; color: #000000;">Rakhi Internet</h1>
+            <p style="font-size: 1.5em; color: #666;">Bahichara Dj Sound </p>
+            <p style="font-size: 1.1em; color: #666;">
+                <a href="https://www.google.com/maps/sear5ch/?api=1&query=Bhiwani+Road+Bypass,+Jind+HR+126102" 
+                   target="_blank" 
+                   style="color: #007bff; text-decoration: none;">
+                📍 Bhiwani Road Bypass, Jind [HR] 126102
+                </a>
+            </p>
+            
+
+        </div>
+    </div>
+
+    <!-- Greeting, Day, and Date Display -->
+    <div id="datetime" style="font-family: 'Arial', sans-serif; font-size: 1.1em; text-align: left; color: #e45c5c; border-left: 2px solid #0c0c0c;  padding-left: 20px; height: 100px; display: flex; flex-direction: column; justify-content: center;">
+        <span id="greeting" style="font-weight: bold; font-size: 1.5em; color: #ff5722;"></span>
+        <span id="current-day" style="font-weight: bold; font-size: 1.2em;"></span>
+        <span id="current-date" style="font-size: 1.1em; color: #666;"></span>
+    </nav>
+    </div>
+</div>
+
+<script>
+    function updateDateTime() {
+        var today = new Date();
+
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var day = days[today.getDay()];
+        var date = today.getDate();
+        var month = months[today.getMonth()];
+        var year = today.getFullYear();
+        var hours = today.getHours();
+
+        // Determine greeting based on the time of day
+        var greeting;
+        if (hours < 12) {
+            greeting = "Good Morning";
+        } else if (hours < 18) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good Evening";
+        }
+
+        // Update greeting, day, and date in the HTML
+        document.getElementById('greeting').textContent = greeting;
+        document.getElementById('current-day').textContent = day;
+        document.getElementById('current-date').textContent = date + ' ' + month + ' ' + year;
+    }
+
+    // Initial call to display greeting, day, and date immediately
+    updateDateTime();
+  </script>
+ </div>
+ <!-- All types notes in pdf form  -->
+
+ <h2 style="text-align: center; color: #333;">Available Resources</h2>
+ <div class="box-container">
+     <div class="box">
+        <a href=" c:\Users\Nitesh\Desktop\Main Program\available resource\CSC Untitled-1.html"> <img src="c:\Users\Nitesh\Desktop\Main Program\all used logo\3e018ffab689379fc9e2e7b4e21e9d76-removebg-preview.png" alt=" ">
+        </a>
+        
+     </div>
+
+     <div class="box">
+        <a href="c:\Users\Nitesh\Desktop\Main Program\available resource\Distance Education Untitled-1.html "> <img src="c:\Users\Nitesh\Desktop\Main Program\all used logo\360_F_341680584_xyhYhFyAdER2ZNqP0ltg1ULRGc0oIoH6-removebg-preview.png " alt=" ">
+        </a>
+     </div>
+
+     <div class="box">
+        <a href="c:\Users\Nitesh\Desktop\Main Program\available resource\Bhaichata Dj Untitled-1.html "> <img src="c:\Users\Nitesh\Downloads\dj.png" alt=" ">
+        </a>
+     </div>
+     
+     <div class="box">
+         <a href="c:\Users\Nitesh\Desktop\Main Program\available resource\DTDC Untitled-1.html"> <img src="c:\Users\Nitesh\Desktop\Main Program\all used logo\DTDC_logo-removebg-preview.png" alt=" ">
+         </a>
+     </div> 
+     
+     
+ </div>
+ <!-- Blog Content -->
+    <div class="container">
+        <!-- Main Blog Content -->
+        <div class="main-content">
+            <h2>Rakhi Internet: The Power of Less</h2>
+            <h3>&#x1F449; <a>  We are focus on your help. </a></p> </h3>
+            <p style="font-size: 18px; font-weight: bold; color: #ff5733; text-align: left;">
+                👉🚀 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                    International Express Courier & Cargo ✈️
+                </a>
+            </p>
+            
+            <p style="font-size: 18px; font-weight: bold; color: #ff5733; text-align: left;">
+                👉 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                    Distance Education Help Centre - BA, B.Com, B.Ed, MA, M.Com, etc. 🎓
+                </a>
+            </p>
+            <p style="font-size: 18px; font-weight: bold; color: #ff5733; text-align: left;">
+                👉 🔊 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                    Bahichara DJ Sound - Single & Double Base, Stage & Light Program 🎶
+                </a>
+            </p>
+            
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Important Link</h3>
+            <marquee direction="right" behavior="scroll" scrollamount="2 scrolldelay=15" style="color: black; font-size: 20px;">
+                
+                
+                <ul style="list-style: none; padding: 0; text-align: left;">
+                    <li style="font-size: 18px; font-weight: bold; color: #ff5733;">
+                        🚀 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                        style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                            Express Courier & Cargo 📦✈️
+                        </a>
+                    </li>
+                    
+                    <li style="font-size: 18px; font-weight: bold; color: #ff5733; margin-top: 10px;">
+                        📝 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                        style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                            Ignou Assignment Submission 📚📩
+                        </a>
+                    </li>
+                
+                    <li style="font-size: 18px; font-weight: bold; color: #ff5733; margin-top: 10px;">
+                        🎓 <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                        style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                            Distance Education Help Center 🏫📖
+                        </a>
+                    </li>
+                </ul>
+                <li style="font-size: 18px; font-weight: bold; color: #ff5733; text-align: left; list-style: none;">
+                    ✅ <a href="https://chrome.google.com/webstore?hl=en" target="_blank" 
+                    style="text-decoration: none; color: #007bff; font-size: 20px; font-weight: bold;">
+                        All Type CSC Work - Fast & Reliable Digital Services 💼📄
+                    </a>
+                </li>
+            </marquee>
+            <ul>
+                <li><a href="https://chrome.google.com/webstore?hl=en"> </a></li>
+            </ul>
+        </div>
+    </div>
+                                                             <!-- All 
+                                                                          free 
+                                                                                    Resource   -->
+             
+                
+   <h1 style="text-align: center; color: #222323;">Free Resources</h1>
+   <div class="flex-box-container">
+    <div class="flex-box">
+        <p><h3>Ignou Solved Assignment</h3></p>
+        <a href="c:\Users\Nitesh\Desktop\Main Program\free resource\Ignou Assigment.html" class="Download-Now">Download Now</a>
+    </div>
+    <div class="flex-box">
+        
+        <p><h3>Haryana Statsic GK</h3></p>
+        <a href=" c:\Users\Nitesh\Desktop\Main Program\free resource\haryana ststic gk.html" class="Read-Now">Read Now </a>
+    </div>
+    <div class="flex-box">
+        
+        <p><h3>Reasoning & Short Tricks</h3></p>
+        <a href="c:\Users\Nitesh\Desktop\Main Program\free resource\Reasiong.html" class="Read-Now">Read Now</a>
+    </div>
+    <div class="flex-box">
+        <p><h3>Mathematics & Short Tricks</h3></p>
+        <a href="c:\Users\Nitesh\Desktop\Main Program\free resource\math.html" class="Read-Now">Read Now</a>
+    </div>
+    <div class="flex-box">
+        <p><h3>Specific Subjects</h3></p>
+        <a href="c:\Users\Nitesh\Desktop\Main Program\free resource\specific subject.html " class="Read-Now">Read Now </a>
+    </div>
+</div>
+
+
+    
+        
+</head>
+<body>
+    <!-- yha ae footer html work start -->
+    <footer>
+        <div class="footer-container">
+            <!-- Content section on the left -->
+            <div class="footer-content">
+            <p> Website content managed and owend by Rakhi Internet,All Rights Reserved </p>
+              <p> Website designed by Nitesh Verma & hosted by  CSC.
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+            
+            <!-- Logo section on the right -->
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="c:\Users\Nitesh\Desktop\Main Program\all used logo\csclogo.png" alt="RakhiInternetLogo" class="footer-logo-image">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
